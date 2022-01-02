@@ -24,7 +24,7 @@ func main(){
 	//using the PrintMe func of packageone
 
 	
-	packageone.PrintMe(myVar,blockVar,packageone.PackageVar)
+	packageone.PrintMe(myVar,blockVar)
 
 }
 
