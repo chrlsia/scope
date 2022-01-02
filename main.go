@@ -1,24 +1,30 @@
 package main
 
 import (
-	"fmt"
 	"myapp/packageone"
 )
-
-var one ="one"
+var myVar ="This is a package level var"
 
 func main(){
-	var somethingElse = "this is a block variable"
-	fmt.Println(somethingElse)
+	//variables
+	//declare a package level var for the main
+	//package named myVar
 
-	myFunc()
+	//declare a block variable for the main function
+	//called blockVar
+	var blockVar = "This is a block level var"
 
-	newString:=packageone.PublicVar
-	fmt.Println("From packageone:",newString)
+	//declare a package level variable in packageone
+	//package named PackageVar
 
-	//package.Exported is available
+	//create an exported functionn in packageone named PrintMe
+
+	//in the main function print out the values of myVar,
+	//blockVar, and PackageVar in one line
+	//using the PrintMe func of packageone
+
+	
+	packageone.PrintMe(myVar,blockVar,packageone.PackageVar)
+
 }
 
-func myFunc(){
-	fmt.Println(one)
-}

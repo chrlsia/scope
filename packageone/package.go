@@ -1,12 +1,10 @@
 package packageone
 
-var privateVar = "I am private"
-var PublicVar = "I am public (or exported)"
+import "fmt"
 
-func notExpoterd(){
+var PackageVar = "This is a package var in packageone"
 
-}
 
-func Exported(){
-
+func PrintMe(myVar, blockVar, PackageVar string){
+	fmt.Println(myVar,blockVar,PackageVar)
 }
